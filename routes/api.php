@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PublisherController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TicketController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Http\Request;
@@ -26,6 +27,8 @@ Route::middleware(['auth:sanctum', AdminMiddleware::class])->group(function () {
     Route::apiResource('/publishers', PublisherController::class);
 
     Route::apiResource('/tickets', TicketController::class);
+
+    Route::post('/search', [SearchController::class, 'search']);
 });
 
 // Autenticación
