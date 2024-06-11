@@ -42,15 +42,23 @@ class BookController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $book = Book::findOrFail($id);
+
+        return $book;
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(BookRequest $request, string $id)
     {
-        //
+        $book = Book::findOrFail($id);
+
+        $data = $request->validated();
+
+        $book->update($data);
+
+        return $book;
     }
 
     /**

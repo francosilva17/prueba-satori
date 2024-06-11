@@ -21,6 +21,7 @@ Route::get('/admin', function (Request $request) {
 
 Route::middleware(['auth:sanctum', AdminMiddleware::class])->group(function () {
     Route::apiResource('/books', BookController::class);
+    Route::apiResource('/books/{id}', BookController::class);
 
     Route::apiResource('/categories', CategoryController::class);
 
