@@ -27,6 +27,7 @@ class BookController extends Controller
         $book = Book::create([
             'title' => $data['title'],
             'category_id' => $data['category_id'],
+            'publisher_id' => $data['publisher_id'],
             'quantity' => $data['quantity'],
 
         ]);

@@ -23,6 +23,12 @@ class SearchController extends Controller
             });
         }
 
+        if ($request->has('publisher')) {
+            $query->whereHas('publisher', function ($q) use ($request) {
+                $q->where('name', 'like', '%' . $request->input('publisher') . '%');
+            });
+        }
+
         $books = $query->get();
 
         return response()->json($books);
