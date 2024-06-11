@@ -21,6 +21,7 @@ class BooksSeeder extends Seeder
             [
                 'title' => 'Laravel for Beginners',
                 'category_id' => $categoria1->id,
+                'publisher_id' => 2,
                 'quantity' => 10,
                 'deleted_at' => null,
                 'created_at' => now(),
@@ -29,6 +30,7 @@ class BooksSeeder extends Seeder
             [
                 'title' => 'Advanced PHP Programming',
                 'category_id' => $categoria1->id,
+                'publisher_id' => 1,
                 'quantity' => 5,
                 'deleted_at' => null,
                 'created_at' => now(),
@@ -37,6 +39,7 @@ class BooksSeeder extends Seeder
             [
                 'title' => 'Introduction to Quantum Physics',
                 'category_id' => $categoria2->id,
+                'publisher_id' => 3,
                 'quantity' => 7,
                 'deleted_at' => null,
                 'created_at' => now(),
@@ -45,6 +48,7 @@ class BooksSeeder extends Seeder
             [
                 'title' => 'Astrobiology: The Search for Life',
                 'category_id' => $categoria2->id,
+                'publisher_id' => 2,
                 'quantity' => 3,
                 'deleted_at' => null,
                 'created_at' => now(),
@@ -53,6 +57,7 @@ class BooksSeeder extends Seeder
             [
                 'title' => 'The Science of Interstellar',
                 'category_id' => $categoria2->id,
+                'publisher_id' => 2,
                 'quantity' => 4,
                 'deleted_at' => null,
                 'created_at' => now(),

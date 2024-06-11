@@ -25,4 +25,9 @@ class Book extends Model
     {
         return $this->hasMany(Ticket::class);
     }
+
+    public function publisher()
+    {
+        return $this->belongsTo(Publisher::class);
+    }
 }
