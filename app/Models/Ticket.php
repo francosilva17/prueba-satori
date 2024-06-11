@@ -9,6 +9,8 @@ class Ticket extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['client_id', 'book_id'];
+
     public function client()
     {
         return $this->belongsTo(User::class, 'client_id');
