@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Middleware\AdminMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -18,6 +19,8 @@ Route::get('/admin', function (Request $request) {
 Route::middleware(['auth:sanctum', AdminMiddleware::class])->group(function () {
     Route::apiResource('/books', BookController::class);
     Route::apiResource('/books', BookController::class);
+
+    Route::apiResource('/categories', CategoryController::class);
 });
 
 // Autenticación

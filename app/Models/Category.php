@@ -9,6 +9,8 @@ class Category extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'deleted_at'];
+
     public function books()
     {
         return $this->hasMany(Book::class);
