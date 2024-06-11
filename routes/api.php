@@ -10,3 +10,4 @@ Route::get('/user', function (Request $request) {
 
 // Autenticación
 Route::post('/register', [AuthController::class, 'register']);
+Route::post('/login', [AuthController::class, 'login']);
