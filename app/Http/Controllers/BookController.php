@@ -58,7 +58,7 @@ class BookController extends Controller
 
         $book->update($data);
 
-        return $book;
+        return ['book' => $book];
     }
 
     /**
@@ -66,6 +66,9 @@ class BookController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $book = Book::findOrFail($id);
+        $book->delete();
+
+        return ['message' => 'El libro se ha eliminado correctamente'];
     }
 }
